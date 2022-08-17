@@ -1,3 +1,9 @@
+/* PARAMETERS */
+:root {
+    --header_color: rgb(179, 179, 179);
+    --footer_color: rgb(241, 241, 241);
+}
+
 /*RESET*/
 * {
     margin: 0px;
@@ -24,7 +30,7 @@ header {
     align-items: center;
     /*justify-content: left;*/
     grid-area: header;
-    background-color:rgb(211, 211, 211);
+    background-color: var(--header_color);
 }
 
 nav {
@@ -69,6 +75,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom, var(--header_color), var(--footer_color));
 }
 
 .banner {
@@ -130,7 +137,7 @@ footer {
     justify-content: right;
     align-items: center;
     grid-area: footer;
-    background-color: rgb(211, 211, 211);
+    background-color: var(--footer_color);
 }
 
 .footer__list {
@@ -184,6 +191,15 @@ a {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    .banner__item {
+        width: 70%;
+    }
+
+    .banner__img {
+        width: 70%;
+    }
+
     /*FOOTER*/
 
     footer {

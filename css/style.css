@@ -124,6 +124,10 @@ main {
     text-align: center;
 }
 
+.banner__h:hover {
+    transform: scale(2);
+}
+
 .banner__titulo {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;

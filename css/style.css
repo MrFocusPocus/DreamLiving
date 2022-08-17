@@ -1,7 +1,10 @@
 /* PARAMETERS */
 :root {
     --header_color: rgb(179, 179, 179);
+    --header_color_hover: rgb(152, 152, 152);
     --footer_color: rgb(241, 241, 241);
+    --footer_color_hover: rgb(255, 255, 255);
+    --icon_rotation:45deg;
 }
 
 /*RESET*/
@@ -33,6 +36,10 @@ header {
     background-color: var(--header_color);
 }
 
+header:hover {
+    background-color: var(--header_color_hover);
+}
+
 nav {
     display: flex;
     justify-content: left;
@@ -54,6 +61,10 @@ nav {
 
 .nav__list__item__icon {
     margin-right: 10px;
+}
+
+.nav__list__item__icon:hover {
+    transform:rotate(var(--icon_rotation));
 }
 
 .nav__list__item__a {
@@ -140,6 +151,10 @@ footer {
     background-color: var(--footer_color);
 }
 
+footer:hover {
+    background-color: var(--footer_color_hover);
+}
+
 .footer__list {
     display: flex;
     list-style-type: none;
@@ -149,6 +164,10 @@ footer {
 .footer__item {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.footer__item__icon:hover {
+    transform:rotate(var(--icon_rotation));
 }
 
 a {

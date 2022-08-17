@@ -4,7 +4,8 @@
     --header_color_hover: rgb(152, 152, 152);
     --footer_color: rgb(241, 241, 241);
     --footer_color_hover: rgb(255, 255, 255);
-    --icon_rotation:45deg;
+    --icon_rotation: 45deg;
+    --transition_time: 1s;
 }
 
 /*RESET*/
@@ -34,6 +35,7 @@ header {
     /*justify-content: left;*/
     grid-area: header;
     background-color: var(--header_color);
+    transition: all var(--transition_time);
 }
 
 header:hover {
@@ -61,6 +63,7 @@ nav {
 
 .nav__list__item__icon {
     margin-right: 10px;
+    transition: all var(--transition_time);
 }
 
 .nav__list__item__icon:hover {
@@ -124,6 +127,10 @@ main {
     text-align: center;
 }
 
+.banner__h{
+    transition: all var(--transition_time);
+}
+
 .banner__h:hover {
     transform: scale(2);
 }
@@ -153,6 +160,7 @@ footer {
     align-items: center;
     grid-area: footer;
     background-color: var(--footer_color);
+    transition: all var(--transition_time);
 }
 
 footer:hover {
@@ -168,6 +176,10 @@ footer:hover {
 .footer__item {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.footer__item__icon{
+    transition: all var(--transition_time);
 }
 
 .footer__item__icon:hover {

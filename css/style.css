@@ -226,6 +226,10 @@ a {
         justify-content: space-around;
     }
 
+    .banner__icon {
+        width: 50%;
+    }
+
     .banner__titulo {
         text-align: center;
         margin-top: 10px;

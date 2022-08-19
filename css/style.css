@@ -38,6 +38,7 @@ header {
     grid-area: header;
     background-color: var(--header_color);
     transition: all var(--transition_time);
+    height: 10vh;
 }
 
 header:hover {
@@ -92,6 +93,7 @@ main {
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, var(--header_color), var(--footer_color));
+    height: 80vh;
 }
 
 .banner {
@@ -163,6 +165,7 @@ footer {
     grid-area: footer;
     background-color: var(--footer_color);
     transition: all var(--transition_time);
+    height: 10vh;
 }
 
 footer:hover {

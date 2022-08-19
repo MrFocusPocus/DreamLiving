@@ -16,7 +16,9 @@
 }
 
 /*GRID*/
-.container {
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
     height: 100vh;
     display: grid;
     grid-template-areas: 

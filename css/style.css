@@ -87,6 +87,8 @@ nav {
 main {
     grid-area: main;
     display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, var(--header_color), var(--footer_color));
@@ -96,7 +98,11 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     height: 80%;
+    width: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .banner__item {
@@ -104,8 +110,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    padding: 10px;
+    width: 50%;
+    height: 80%;
+    padding: 5x;
 }
 
 .banner__text {
@@ -123,7 +130,7 @@ main {
 
 .banner__icon {
     display: inline-block;
-    width: 70%;
+    width: 50%;
     text-align: center;
 }
 
@@ -147,8 +154,9 @@ main {
     border-width: 2px;
 }
 
-banner__video {
-    width: 30%;
+.banner__video {
+    height: 100%;
+    width: 80%;
     border-radius: 50px;
     border-style: hidden;
     border-width: 2px;
@@ -192,7 +200,7 @@ a {
 
 /* Mobile CSS */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
     
     /* HEADER */
 
@@ -212,6 +220,7 @@ a {
     main {
         align-items: center;
         justify-content: center;
+        overflow-y: visible;
     }
 
     .banner {
@@ -223,16 +232,19 @@ a {
 
     .banner__titulo {
         text-align: center;
-        margin-top: 10px;
+        padding-top: 5vh;
         margin-bottom: 10px;
     }
 
     .banner__item {
         width: 70%;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
     }
 
     .banner__img {
         width: 70%;
+        padding-top: 5vh;
     }
 
     /*FOOTER*/

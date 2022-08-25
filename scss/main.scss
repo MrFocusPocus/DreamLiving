@@ -1,3 +1,221 @@
-body {
-    color: red;
+$header_color: rgb(179, 179, 179);
+$header_color_hover: rgb(152, 152, 152);
+$footer_color: rgb(241, 241, 241);
+$footer_color_hover: rgb(255, 255, 255);
+$icon_rotation: 45deg;
+$transition_time: 1s;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: $header_color;
+    color: $header_color;
+
+    &-track {
+        background: $header_color;
+    }
+
+    &-thumb {
+        background: $header_color;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/*GRID*/
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header header header"
+    "main main main main main"
+    "footer footer footer footer footer";
+    grid-template-rows: 50px auto 50px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/*HEADER*/
+
+header {
+    display: flex;
+    align-items: center;
+    /*justify-content: left;*/
+    grid-area: header;
+    background-color: $header_color;
+    transition: all $transition_time;
+
+    &:hover {
+        background-color: $header_color_hover;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav__list {
+    display: flex;
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        &__icon {
+            margin-right: 10px;
+            transition: all $transition_time;
+
+            &:hover {
+                transform:rotate($icon_rotation);
+            }
+        }
+
+        &__a {
+            font-weight: bold;
+            font-size: 26px;
+            color: grey;
+
+            &:hover {
+                font-weight: bold;
+                font-size: 26px;
+                color: azure;
+            }
+        }
+    }
+}
+
+/*Main*/
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, $header_color, $footer_color);
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 80%;
+        padding: 5x;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        transition: all $transition_time;
+
+        &:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+    }
+
+    &__h{
+        transition: all $transition_time;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    &__titulo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+    }
+
+    &__imagen {
+        width: 70%;
+        border-radius: 50px;
+        border-style: hidden;
+        border-width: 2px;
+    }
+
+    &__video {
+        height: 100%;
+        width: 80%;
+        border-radius: 50px;
+        border-style: hidden;
+        border-width: 2px;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    grid-area: footer;
+    background-color: $footer_color;
+    transition: all $transition_time;
+
+    &:hover {
+        background-color: $footer_color_hover;
+    }
+}
+
+.footer__list {
+    display: flex;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.footer__item {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &__icon{
+        transition: all $transition_time;
+
+        &:hover {
+            transform:rotate($icon_rotation);
+        }
+    }
 }

@@ -1,9 +1,4 @@
-$header_color: rgb(179, 179, 179);
-$header_color_hover: rgb(152, 152, 152);
-$footer_color: rgb(241, 241, 241);
-$footer_color_hover: rgb(255, 255, 255);
-$icon_rotation: 45deg;
-$transition_time: 1s;
+@import "./utils/variables";
 
 * {
     box-sizing: border-box;
@@ -219,3 +214,5 @@ footer {
         }
     }
 }
+
+@import "./mobile/mobile";

@@ -186,4 +186,53 @@ footer:hover {
   transform: rotate(45deg);
 }
 
+/* Mobile CSS */
+@media screen and (max-width: 810px) {
+  /* HEADER */
+  nav {
+    justify-content: center;
+  }
+  .nav__list {
+    width: 90%;
+    justify-content: space-around;
+  }
+  .nav__list__item__a {
+    display: none;
+  }
+  /* MAIN */
+  main {
+    align-items: center;
+    justify-content: center;
+    overflow-y: visible;
+  }
+  .banner {
+    height: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .banner__titulo {
+    text-align: center;
+    padding-top: 5vh;
+    margin-bottom: 10px;
+  }
+  .banner__item {
+    width: 70%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .banner__img {
+    width: 70%;
+    padding-top: 5vh;
+  }
+  /*FOOTER*/
+  footer {
+    justify-content: center;
+  }
+  .footer__list {
+    width: 90%;
+    justify-content: space-around;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

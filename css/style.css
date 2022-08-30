@@ -50,29 +50,28 @@ nav {
   margin-left: 10px;
   margin-right: 10px;
 }
-
-.nav__list {
+nav ul {
   display: flex;
   list-style-type: none;
 }
-.nav__list__item {
+nav ul li {
   display: flex;
   margin-left: 10px;
   margin-right: 10px;
 }
-.nav__list__item__icon {
+nav ul li img {
   margin-right: 10px;
   transition: all 1s;
 }
-.nav__list__item__icon:hover {
+nav ul li img:hover {
   transform: rotate(45deg);
 }
-.nav__list__item__a {
+nav ul li a {
   font-weight: bold;
   font-size: 26px;
   color: grey;
 }
-.nav__list__item__a:hover {
+nav ul li a:hover {
   font-weight: bold;
   font-size: 26px;
   color: azure;

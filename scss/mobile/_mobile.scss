@@ -6,16 +6,18 @@
 
     nav {
         justify-content: center;
+
+        ul {
+            width: 90%;
+            justify-content: space-around;
+        }
+
+        a {
+            display: none;
+        }
     }
 
-    .nav__list {
-        width: 90%;
-        justify-content: space-around;
-    }
-    .nav__list__item__a {
-        display: none;
-    }
-
+    
     /* MAIN */
     main {
         align-items: center;

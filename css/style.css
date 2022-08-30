@@ -195,7 +195,7 @@ footer:hover {
     width: 90%;
     justify-content: space-around;
   }
-  nav a {
+  nav .nav__text {
     display: none;
   }
   /* MAIN */

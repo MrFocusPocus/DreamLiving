@@ -4,3 +4,8 @@ $footer_color: rgb(241, 241, 241);
 $footer_color_hover: rgb(255, 255, 255);
 $icon_rotation: 45deg;
 $transition_time: 1s;
+
+@mixin margin-lr {
+    margin-left: 10px;
+    margin-right: 10px;
+}

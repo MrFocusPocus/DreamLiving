@@ -23,7 +23,7 @@ a {
 
 /*GRID*/
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-areas: "header header header header header" "main main main main main" "footer footer footer footer footer";
   grid-template-rows: 50px auto 50px;
@@ -34,7 +34,6 @@ a {
 header {
   display: flex;
   align-items: center;
-  /*justify-content: left;*/
   grid-area: header;
   background-color: rgb(179, 179, 179);
   transition: all 1s;
@@ -45,10 +44,10 @@ header:hover {
 
 nav {
   display: flex;
-  justify-content: left;
-  width: 100%;
   margin-left: 10px;
   margin-right: 10px;
+  justify-content: left;
+  width: 100%;
 }
 nav ul {
   display: flex;
@@ -82,7 +81,6 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to bottom, rgb(179, 179, 179), rgb(241, 241, 241));

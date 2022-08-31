@@ -27,7 +27,7 @@ a {
 
 /*GRID*/
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-areas: 
     "header header header header header"
@@ -35,6 +35,7 @@ a {
     "footer footer footer footer footer";
     grid-template-rows: 50px auto 50px;
     grid-template-columns: repeat(5, 1fr);
+    
 }
 
 /*HEADER*/
@@ -42,7 +43,6 @@ a {
 header {
     display: flex;
     align-items: center;
-    /*justify-content: left;*/
     grid-area: header;
     background-color: $header_color;
     transition: all $transition_time;
@@ -54,10 +54,10 @@ header {
 
 nav {
     display: flex;
-    justify-content: left;
-    width: 100%;
     margin-left: 10px;
     margin-right: 10px;
+    justify-content: left;
+    width: 100%;
 
     ul {
         display: flex;
@@ -100,7 +100,6 @@ main {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, $header_color, $footer_color);

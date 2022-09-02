@@ -52,6 +52,11 @@ header {
     }
 }
 
+.sizeAndWeight {
+    font-weight: bold;
+    font-size: 26px;
+}
+
 nav {
     display: flex;
     @include margin-lr;
@@ -74,15 +79,13 @@ nav {
                     transform:rotate($icon_rotation);
                 }
             }
-    
+
             a {
-                font-weight: bold;
-                font-size: 26px;
+                @extend .sizeAndWeight;
                 color: grey;
     
                 &:hover {
-                    font-weight: bold;
-                    font-size: 26px;
+                    @extend .sizeAndWeight;
                     color: azure;
                 }
             }

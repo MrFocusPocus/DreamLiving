@@ -1,3 +1,11 @@
+/* Reset */
+
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 /* Header */
 
 #header__logo {
@@ -6,21 +14,22 @@
   height: 12vmin;
   top: 4vmin;
   left: 5vmin;
+  z-index: 9;
 }
 
 /* Hamburger menu */
 
 #toggle {
     display: none;
-  }
+}
 
 .hamburger {
-    position: absolute;
+    position: fixed;
     top: 3vmin;
     right: 5vmin;
     width: 12vmin;
     height: 12vmin;
-    z-index: 1;
+    z-index: 10;
 }
 
 .hamburger div {
@@ -31,35 +40,35 @@
     border-radius: 2vmin;
     background-color: black;
     transition: all 0.3s ease-in-out;
-  }
+}
 
-  /* NAV CSS */
+/* NAV CSS */
 
-  .nav {
+.nav {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: grey;
+    background-color: rgba(150, 150, 150, 0.95);
     top: -100%; left: 0; right: 0; bottom: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    transform: scale(0);
-  }
+    transform: scale(0)
+}
 
-  .nav-wrapper {
+.nav-wrapper {
     position: relative;
     overflow: hidden;
     overflow-y: auto;
     height: 100%;
-  }
+}
 
-  nav {
+nav {
     text-align: left;
     margin-top: 25vmin;
     margin-left: 25vmin;
-  }
+}
 
-  nav a {
+nav a {
     position: relative;
     text-decoration: none;
     color: black;
@@ -68,9 +77,9 @@
     margin-top: 1.25em;
     transition: color 0.2s ease-in-out;
     letter-spacing: 1px;
-  }
+}
 
-  nav a:before {
+nav a:before {
     content: '';
     height: 0;
     position: absolute;
@@ -78,33 +87,97 @@
     background-color: white;
     left: -0.5em;
     transition: all 0.2s ease-in-out;
-  }
+}
 
-  nav a:hover {
+nav a:hover {
     color: white;
-  }
-  nav a:hover:before {
-    height: 100%;
-  }
+}
   
+nav a:hover:before {
+    height: 100%;
+}
+  
+/* Content */
 
+section {
+  height: 100vh;
+  width: 100vw;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
 
-  /* Animations & Style on Toggle*/
+section::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 
-  #toggle:checked + .hamburger .top-bun {
+.hero__img {
+position: absolute;
+  width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.hero__text {
+  position: relative;
+  text-align: center;
+  top: 20vh;
+  font-size: 3em;
+  background-color: rgba(225, 225, 225, 0.4);
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.content p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.content img {
+  width: 25vw;
+}
+
+.collage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collage__img {
+  width: 25vmin;
+  height: 25vmin;
+}
+
+/* Animations & Style on Toggle*/
+
+#toggle:checked + .hamburger .top-bun {
     transform: rotate(-45deg);
     margin-top: 6vmin;
-  }
-  #toggle:checked + .hamburger .bottom-bun {
+}
+
+#toggle:checked + .hamburger .bottom-bun {
     opacity: 0;
     transform: rotate(45deg);
-  }
-  #toggle:checked + .hamburger .meat {
+}
+
+#toggle:checked + .hamburger .meat {
     transform: rotate(45deg);
     margin-top: -2vmin;
-  }
+}
 
-  #toggle:checked + .hamburger + .nav {
+#toggle:checked + .hamburger + .nav {
     top: 0;
     transform: scale(1);
-  }
+    z-index: 9;
+}
